@@ -1,0 +1,2 @@
+class Powerstat < ApplicationRecord
+end
