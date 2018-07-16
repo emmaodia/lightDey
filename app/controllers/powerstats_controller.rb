@@ -1,7 +1,7 @@
 class PowerstatsController < ApplicationController
 
   def index
-    @powerstat = Powerstat.all
+    @powerstats = Powerstat.all
   end
 
   def show
@@ -9,7 +9,7 @@ class PowerstatsController < ApplicationController
   end
 
   def new
-    @powerstat = Powerstat.new
+
   end
 
   def edit
@@ -45,6 +45,6 @@ class PowerstatsController < ApplicationController
 
   private
     def powerstat_params
-      params.require(:powerstat).permit(:title, :text)
+      params.require(:powerstat).permit(:location, :address)
     end
 end

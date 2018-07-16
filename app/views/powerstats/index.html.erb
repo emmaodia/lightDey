@@ -1,0 +1,22 @@
+<h1>Listing articles</h1>
+
+<%= link_to 'New article', new_powerstat_path %>
+<br />
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+
+  <% @powerstats.each do |powerstat| %>
+    <tr>
+      <td><%= powerstat.location %></td>
+      <td><%= powerstat.address %></td>
+      <td><%= link_to 'Show', powerstat_path(powerstat) %></td>
+      <td><%= link_to 'Edit', edit_powerstat_path(powerstat) %></td>
+      <td><%= link_to 'Destroy', powerstat_path(powerstat),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
